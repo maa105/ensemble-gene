@@ -46,7 +46,7 @@ const parseOptions = (str, index, data, key, options) => {
   return - 1;
 };
 
-export default function parse(str) {
+const parse = (str) => {
   str = str.trim();
   const data = {};
   let i = 0;
@@ -198,4 +198,6 @@ export default function parse(str) {
   }
 
   return data;
-}
+};
+
+export default parse;

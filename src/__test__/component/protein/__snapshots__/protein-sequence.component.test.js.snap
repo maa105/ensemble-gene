@@ -4,14 +4,6 @@ exports[`Protein sequence with no position and no check 1`] = `
 <div
   className="protein-sequence"
 >
-  
-   
-  <span
-    className="protein-sequence-selected-position"
-  >
-    
-  </span>
-   
   ACDE
 </div>
 `;

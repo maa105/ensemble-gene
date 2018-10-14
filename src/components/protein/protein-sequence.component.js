@@ -11,7 +11,7 @@ class ProteinSequence extends Component {
 
     const pre = (hasPosition) ? sequence.substring(0, position) : '';
     const self = (hasPosition) ? sequence[position] : '';
-    const post = (hasPosition) ? sequence.substring(position + 1) : sequence;
+    const post = (hasPosition) ? sequence.substring(position + 1) : '';
 
     const checkPasses = !hasCheck || self === check;
 
@@ -31,9 +31,17 @@ class ProteinSequence extends Component {
       );
     }
 
+    if(hasPosition) {
+      return (
+        <div className={'protein-sequence'}>
+          {pre}&nbsp;<span className={'protein-sequence-selected-position'}>{self}</span>&nbsp;{post}
+        </div>
+      );
+    }
+
     return (
       <div className={'protein-sequence'}>
-        {pre}&nbsp;<span className={'protein-sequence-selected-position'}>{self}</span>&nbsp;{post}
+        {sequence}
       </div>
     );
   }

@@ -1,4 +1,4 @@
-import { LOAD_PROTEIN, NOOP, LOADING_PROTEIN, PROTEIN_LOADED, ERROR_LOADING_PROTEIN, GENE_SYMBOL_INPUT_VALUE_CHANGE } from '../../actions/index.js';
+import { GENE_SYMBOL_INPUT_VALUE_CHANGE } from '../../actions/index.js';
 import geneReducer from '../../reducers/genes.reducer';
 
 const state = {
