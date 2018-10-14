@@ -4,10 +4,12 @@ There is also a section to parse find and display hgvs format
 
 to run application run:
 
-```npm install
+```
+npm install
 ```
 
 then:
 
-```npm start
+```
+npm start
 ```
