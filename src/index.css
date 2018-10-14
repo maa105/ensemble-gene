@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.protein-sequence {
+  word-break: break-all;
+}
+.protein-sequence-selected-position {
+  font-weight: bold;
+  font-size: 120%;
+  color: red;
+  text-decoration: underline;
+}
+.protein-sequence-selected-position.replacement {
+  text-decoration: line-through;
+  color: rgba(255, 0, 0, .8);
+}
+.hgvs-split-input-char {
+  display: inline-block;
+  position: relative;  
+}
+.hgvs-split-input-char.at {
+  color: red;
+  text-decoration: underline;
+  font-size: 120%;
+}
