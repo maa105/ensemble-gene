@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Top nav renders as expected 1`] = `
+<nav
+  className="navbar navbar-inverse"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="navbar-header"
+    >
+      <a
+        className="navbar-brand"
+        href="https://www.ensembl.org"
+      >
+        Ensembl
+      </a>
+      <button
+        className="navbar-toggle collapsed"
+        onClick={[Function]}
+        type="button"
+      >
+        <span
+          className="sr-only"
+        >
+          Toggle navigation
+        </span>
+        <span
+          className="icon-bar"
+        />
+        <span
+          className="icon-bar"
+        />
+        <span
+          className="icon-bar"
+        />
+      </button>
+    </div>
+    <div
+      aria-expanded={null}
+      className="navbar-collapse collapse"
+    >
+      <ul
+        className="nav navbar-nav"
+        role={null}
+      >
+        <li
+          className=""
+          role="presentation"
+          style={undefined}
+        >
+          <a
+            href="/find-proteins"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+          >
+            Find Protein
+          </a>
+        </li>
+        <li
+          className=""
+          role="presentation"
+          style={undefined}
+        >
+          <a
+            href="/hgvs"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+          >
+            HGVS
+          </a>
+        </li>
+      </ul>
+      <ul
+        className="nav navbar-nav navbar-right"
+        role={null}
+      >
+        <li
+          className=""
+          role="presentation"
+          style={undefined}
+        >
+          <a
+            href="https://rest.ensembl.org/"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+          >
+            API
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+`;

@@ -24,7 +24,7 @@ class HGVSValidationResult extends Component {
     const zeroIndexAminoAcidIndex = validationResult.aminoAcidIndex - PROTEIN_SEQUENCE_START_INDEX;
 
     let aminoAcidAtPositionCheck = true;
-    if(protein && sourceAminoAcid && zeroIndexAminoAcidIndex !== null && zeroIndexAminoAcidIndex !== undefined) {
+    if(protein && sourceAminoAcid && zeroIndexAminoAcidIndex !== null && zeroIndexAminoAcidIndex !== undefined && zeroIndexAminoAcidIndex < protein.seq.length) {
       aminoAcidAtPositionCheck = protein.seq[zeroIndexAminoAcidIndex].toLowerCase() === sourceAminoAcid.toLowerCase();
     }
 

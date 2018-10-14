@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`protien component test Proteins with proper props to render correctly 1`] = `
+<div
+  className="panel-group"
+  id="proteins"
+  role="tablist"
+/>
+`;

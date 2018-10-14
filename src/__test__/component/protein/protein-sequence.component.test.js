@@ -1,5 +1,5 @@
 import React from 'react';
-import ProteinSequence from './protein-sequence.component';
+import ProteinSequence from '../../../components/protein/protein-sequence.component';
 import renderer from 'react-test-renderer';
 
 test('Protein sequence with position, correct check and replacement', () => {

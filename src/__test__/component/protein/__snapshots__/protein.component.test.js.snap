@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`protien component test Protein with proper props to render correctly 1`] = `
+<div
+  className="panel panel-default"
+>
+  <div
+    className="panel-heading"
+    id="2--heading"
+    role="tab"
+  >
+    <div
+      className="panel-title"
+    >
+      <a
+        aria-controls="2--body"
+        aria-expanded={true}
+        className=""
+        href="#"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        role="button"
+      />
+    </div>
+  </div>
+  <div
+    aria-expanded={true}
+    aria-labelledby="2--heading"
+    className="panel-collapse collapse in"
+    id="2--body"
+    role="tabpanel"
+  >
+    <div
+      className="panel-body"
+    />
+  </div>
+</div>
+`;

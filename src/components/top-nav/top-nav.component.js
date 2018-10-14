@@ -1,18 +1,8 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 class TopNav extends Component {
-  constructor(props) {
-    super(props);
-
-    this.geneSymbolInputValueChange = this.geneSymbolInputValueChange.bind(this);
-  }
-
-  geneSymbolInputValueChange(e) {
-    this.props.geneSymbolInputValueChange(e.target.value);
-  }
 
   render() {
     return (
@@ -43,13 +33,4 @@ class TopNav extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-});
-
-const mapDispatchToProps = dispatch => ({
-});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(TopNav);
+export default TopNav;

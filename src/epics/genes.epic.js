@@ -3,11 +3,11 @@ import { noopAction, loadGene, loadingGene, loadGeneProteins, loadingGeneProtein
 import { of, concat } from 'rxjs';
 import { withLatestFrom, switchMap, catchError, map, debounceTime } from 'rxjs/operators';
 import { combineEpics, ofType } from 'redux-observable';
-import { ajax } from 'rxjs/ajax';
 import _ from 'lodash';
 import { MIN_GENE_SYMBOL_DIGITS } from '../constants';
+import { ajax } from 'rxjs/ajax';
 
-const geneSymbolInputValueChangeEpic = action$ => action$.pipe(
+const geneSymbolInputValueChangeEpic = (action$) => action$.pipe(
   ofType(GENE_SYMBOL_INPUT_VALUE_CHANGE),
   debounceTime(1000),
   map((action) => {
@@ -40,7 +40,7 @@ const geneProteinsLoadedEpic = action$ => action$.pipe(
   map((action) => loadGeneProteins(action.gene))
 );
 
-const loadGeneEpic = (action$, state$) => action$.pipe(
+const loadGeneEpic = (action$, state$, { ajax }) => action$.pipe(
   ofType(LOAD_GENE),
   withLatestFrom(state$),
   switchMap(([action,state]) => {
@@ -65,7 +65,7 @@ const loadGeneEpic = (action$, state$) => action$.pipe(
   })
 );
 
-const loadGeneProteinsEpic = (action$, state$) => action$.pipe(
+const loadGeneProteinsEpic = (action$, state$, { ajax }) => action$.pipe(
   ofType(LOAD_GENE_PROTEINS),
   withLatestFrom(state$),
   switchMap(([action, state]) => {
@@ -92,7 +92,7 @@ const loadGeneProteinsEpic = (action$, state$) => action$.pipe(
   })
 );
 
-const loadProteinEpic = (action$, state$) => action$.pipe(
+const loadProteinEpic = (action$, state$, { ajax }) => action$.pipe(
   ofType(LOAD_PROTEIN),
   withLatestFrom(state$),
   switchMap(([action, state]) => {
@@ -117,11 +117,13 @@ const loadProteinEpic = (action$, state$) => action$.pipe(
   })
 );
 
-export const genesEpic = combineEpics(
+const genesEpic = (...args) => combineEpics(
   geneSymbolInputValueChangeEpic,
   hgvsInputValueChangeEpic,
   geneProteinsLoadedEpic,
   loadGeneEpic,
   loadGeneProteinsEpic,
   loadProteinEpic
-);
+)(...args, { ajax });
+
+export default genesEpic;

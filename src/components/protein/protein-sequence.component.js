@@ -9,7 +9,7 @@ class ProteinSequence extends Component {
     const hasReplacement = (replacement !== undefined && replacement !== null);
     const hasCheck = hasPosition && (check !== undefined && check !== null);
 
-    const pre = (hasPosition) ? sequence.substring(0, position - 1) : '';
+    const pre = (hasPosition) ? sequence.substring(0, position) : '';
     const self = (hasPosition) ? sequence[position] : '';
     const post = (hasPosition) ? sequence.substring(position + 1) : sequence;
 
