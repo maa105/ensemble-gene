@@ -8,7 +8,7 @@ There is also a section to parse find and display hgvs format
 npm install
 ```
 
-then:
+#### then:
 
 ```
 npm start
